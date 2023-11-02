@@ -4,7 +4,7 @@ python train.py \
     --upscale_factor 8 \
     --model SRCNN \
     --data_name era5 \
-    --data_path './datasets/nskt16000_1024' \
+    --data_path './datasets/era5' \
     --in_channels 3 \
     --out_channels 3 \
     --crop_size 128 \
@@ -28,7 +28,7 @@ python train.py \
     --upscale_factor 8 \
     --model SRCNN \
     --data_name era5 \
-    --data_path './datasets/nskt16000_1024' \
+    --data_path './datasets/era5' \
     --in_channels 3 \
     --out_channels 3 \
     --crop_size 128 \
@@ -52,7 +52,7 @@ python train.py \
     --upscale_factor 8 \
     --model SRCNN \
     --data_name era5 \
-    --data_path './datasets/nskt16000_1024' \
+    --data_path './datasets/era5' \
     --in_channels 3 \
     --out_channels 3 \
     --crop_size 128 \
@@ -75,7 +75,7 @@ python train.py \
     --upscale_factor 16 \
     --model SRCNN \
     --data_name era5 \
-    --data_path './datasets/nskt16000_1024' \
+    --data_path './datasets/era5' \
     --in_channels 3 \
     --out_channels 3 \
     --crop_size 128 \

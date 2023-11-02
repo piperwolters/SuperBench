@@ -20,14 +20,14 @@ def getData(args, n_patches, std):
     ===
     std: the channel-wise standard deviation of each dataset, list: [#channels]
     '''
-    #train_loader = get_data_loader(args, '/train', train=True, n_patches=n_patches, std=std)
-    #val1_loader = get_data_loader(args, '/valid_1', train=True, n_patches=n_patches, std=std)        
-    #val2_loader = get_data_loader(args, '/valid_2', train=True, n_patches=n_patches, std=std)         
+    train_loader = get_data_loader(args, '/train', train=True, n_patches=n_patches, std=std)
+    val1_loader = get_data_loader(args, '/valid_1', train=True, n_patches=n_patches, std=std)        
+    val2_loader = get_data_loader(args, '/valid_2', train=True, n_patches=n_patches, std=std)         
     test1_loader = get_data_loader(args, '/test_1', train=False, n_patches=n_patches, std=std)        
     test2_loader = get_data_loader(args, '/test_2', train=False, n_patches=n_patches, std=std)
      
-    return None, None, None, test1_loader, test2_loader
-    #return train_loader, val1_loader, val2_loader, test1_loader, test2_loader 
+    #return None, None, None, test1_loader, test2_loader
+    return train_loader, val1_loader, val2_loader, test1_loader, test2_loader 
 
 
 def get_data_loader(args, data_tag, train, n_patches, std):
@@ -39,7 +39,8 @@ def get_data_loader(args, data_tag, train, n_patches, std):
         dataset = GetFluidDataset(location, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
 
     elif args.data_name == 'era5':
-        dataset = GetClimateDataset(args.data_path+data_tag, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
+        location = '/data/piperw/SuperBench/datasets/era5' + data_tag
+        dataset = GetClimateDataset(location, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
     
     elif args.data_name == 'cosmo_lres_sim':
         # print('Using low-resolution simulation degradation...')

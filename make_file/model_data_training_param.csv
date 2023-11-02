@@ -2,7 +2,7 @@ model_name,data_name,data_path,in_channels,out_channels,crop_size,n_patches,lr,b
 SRCNN,nskt_16k,./datasets/nskt16000_1024,3,3,128,8,1.00E-03,256,200,l2,Adam,1.00E-05,0,0
 SRCNN,nskt_32k,./datasets/nskt32000_1024,3,3,128,8,1.00E-03,256,200,l2,Adam,1.00E-05,0,0
 SRCNN,cosmo,./datasets/cosmo_2048,2,2,128,8,1.00E-03,32,200,l2,Adam,1.00E-05,0,0
-SRCNN,era5,./datasets/nskt16000_1024,3,3,128,8,1.00E-03,32,200,l2,Adam,1.00E-05,0,0
+SRCNN,era5,./datasets/era5,3,3,128,8,1.00E-03,32,200,l2,Adam,1.00E-05,0,0
 SRCNN,cosmo_lres_sim,./datasets/cosmo_lres_sim_2048,2,2,128,8,1.00E-03,32,200,l2,Adam,1.00E-05,0,0
 subpixelCNN,nskt_16k,./datasets/nskt16000_1024,3,3,128,8,1.00E-03,32,200,l2,Adam,1.00E-04,0,0
 subpixelCNN,nskt_32k,./datasets/nskt32000_1024,3,3,128,8,1.00E-03,32,200,l2,Adam,1.00E-04,0,0
@@ -12,15 +12,15 @@ subpixelCNN,cosmo_lres_sim,./datasets/cosmo_lres_sim_2048,2,2,128,8,1.00E-04,32,
 EDSR,nskt_16k,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,64,400,l1,Adam,1.00E-05,16,64
 EDSR,nskt_32k,./datasets/nskt32000_1024,3,3,128,8,1.00E-04,64,400,l1,Adam,1.00E-05,16,64
 EDSR,cosmo,./datasets/cosmo_2048,2,2,128,8,1.00E-04,64,300,l1,Adam,1.00E-05,16,64
-EDSR,era5,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,64,300,l1,Adam,1.00E-05,16,64
+EDSR,era5,./datasets/era5,3,3,128,8,1.00E-04,64,300,l1,Adam,1.00E-05,16,64
 EDSR,cosmo_lres_sim,./datasets/cosmo_lres_sim_2048,2,2,128,8,1.00E-04,64,300,l1,Adam,1.00E-05,16,64
 WDSR,nskt_16k,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
 WDSR,nskt_32k,./datasets/nskt32000_1024,3,3,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
 WDSR,cosmo,./datasets/cosmo_2048,2,2,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
-WDSR,era5,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
+WDSR,era5,./datasets/era5,3,3,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
 WDSR,cosmo_lres_sim,./datasets/cosmo_lres_sim_2048,2,2,128,8,1.00E-04,32,300,l1,Adam,1.00E-05,18,32
 SwinIR,nskt_16k,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
 SwinIR,nskt_32k,./datasets/nskt32000_1024,3,3,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
 SwinIR,cosmo,./datasets/cosmo_2048,2,2,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
-SwinIR,era5,./datasets/nskt16000_1024,3,3,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
+SwinIR,era5,./datasets/era5,3,3,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
 SwinIR,cosmo_lres_sim,./datasets/cosmo_lres_sim_2048,2,2,128,8,1.00E-04,32,200,l1,AdamW,1.00E-05,0,0
