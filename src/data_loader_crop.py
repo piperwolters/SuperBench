@@ -20,14 +20,14 @@ def getData(args, n_patches, std):
     ===
     std: the channel-wise standard deviation of each dataset, list: [#channels]
     '''
-
-    train_loader = get_data_loader(args, '/train', train=True, n_patches=n_patches, std=std)
-    val1_loader = get_data_loader(args, '/valid_1', train=True, n_patches=n_patches, std=std)        
-    val2_loader = get_data_loader(args, '/valid_2', train=True, n_patches=n_patches, std=std)         
+    #train_loader = get_data_loader(args, '/train', train=True, n_patches=n_patches, std=std)
+    #val1_loader = get_data_loader(args, '/valid_1', train=True, n_patches=n_patches, std=std)        
+    #val2_loader = get_data_loader(args, '/valid_2', train=True, n_patches=n_patches, std=std)         
     test1_loader = get_data_loader(args, '/test_1', train=False, n_patches=n_patches, std=std)        
     test2_loader = get_data_loader(args, '/test_2', train=False, n_patches=n_patches, std=std)
-        
-    return train_loader, val1_loader, val2_loader, test1_loader, test2_loader 
+     
+    return None, None, None, test1_loader, test2_loader
+    #return train_loader, val1_loader, val2_loader, test1_loader, test2_loader 
 
 
 def get_data_loader(args, data_tag, train, n_patches, std):
@@ -35,7 +35,8 @@ def get_data_loader(args, data_tag, train, n_patches, std):
     transform = torch.from_numpy
 
     if args.data_name == 'nskt_16k' or args.data_name == 'nskt_32k' or args.data_name == 'cosmo':
-        dataset = GetFluidDataset(args.data_path+data_tag, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
+        location = '/data/piperw/SuperBench/datasets/nskt16000_1024' + data_tag
+        dataset = GetFluidDataset(location, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
 
     elif args.data_name == 'era5':
         dataset = GetClimateDataset(args.data_path+data_tag, train, transform, args.upscale_factor, args.noise_ratio, std, args.crop_size,n_patches,args.method) 
@@ -79,6 +80,7 @@ class GetFluidDataset(Dataset):
 
 
     def _get_files_stats(self):
+        print("location?:", self.location)
         self.files_paths = glob.glob(self.location + "/*.h5")
         self.files_paths.sort()
         self.n_files = len(self.files_paths)

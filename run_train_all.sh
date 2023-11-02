@@ -1,5 +1,4 @@
 export CUDA_VISIBLE_DEVICES=0,1,2,3
-
 python train.py \
     --method 'bicubic' \
     --upscale_factor 8 \
@@ -7,7 +6,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -31,7 +30,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -55,7 +54,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -78,7 +77,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -101,7 +100,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -125,7 +124,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -149,7 +148,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -172,7 +171,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -195,7 +194,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -219,7 +218,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -243,7 +242,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -266,7 +265,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -289,7 +288,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -313,7 +312,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -337,7 +336,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -360,7 +359,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -382,7 +381,7 @@ python train.py \
     --data_name cosmo_lres_sim \
     --data_path './datasets/cosmo_lres_sim_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -405,7 +404,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -429,7 +428,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -453,7 +452,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -476,7 +475,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -499,7 +498,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -523,7 +522,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -547,7 +546,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -570,7 +569,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.001 \
@@ -593,7 +592,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -617,7 +616,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -641,7 +640,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -664,7 +663,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -687,7 +686,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -711,7 +710,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -735,7 +734,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -758,7 +757,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -780,7 +779,7 @@ python train.py \
     --data_name cosmo_lres_sim \
     --data_path './datasets/cosmo_lres_sim_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -803,7 +802,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -827,7 +826,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -851,7 +850,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -874,7 +873,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -897,7 +896,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -921,7 +920,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -945,7 +944,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -968,7 +967,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -991,7 +990,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1015,7 +1014,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1039,7 +1038,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1062,7 +1061,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1085,7 +1084,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1109,7 +1108,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1133,7 +1132,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1156,7 +1155,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1178,7 +1177,7 @@ python train.py \
     --data_name cosmo_lres_sim \
     --data_path './datasets/cosmo_lres_sim_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1201,7 +1200,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1225,7 +1224,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1249,7 +1248,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1272,7 +1271,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1295,7 +1294,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1319,7 +1318,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1343,7 +1342,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1366,7 +1365,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1389,7 +1388,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1413,7 +1412,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1437,7 +1436,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1460,7 +1459,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1483,7 +1482,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1507,7 +1506,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1531,7 +1530,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1554,7 +1553,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1576,7 +1575,7 @@ python train.py \
     --data_name cosmo_lres_sim \
     --data_path './datasets/cosmo_lres_sim_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1599,7 +1598,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1623,7 +1622,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1647,7 +1646,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1670,7 +1669,7 @@ python train.py \
     --data_name nskt_16k \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1693,7 +1692,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1717,7 +1716,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1741,7 +1740,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1764,7 +1763,7 @@ python train.py \
     --data_name nskt_32k \
     --data_path './datasets/nskt32000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1787,7 +1786,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1811,7 +1810,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1835,7 +1834,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1858,7 +1857,7 @@ python train.py \
     --data_name cosmo \
     --data_path './datasets/cosmo_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1881,7 +1880,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1905,7 +1904,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1929,7 +1928,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1952,7 +1951,7 @@ python train.py \
     --data_name era5 \
     --data_path './datasets/nskt16000_1024' \
     --in_channels 3 \
-    --out_channles 3 \
+    --out_channels 3 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
@@ -1974,7 +1973,7 @@ python train.py \
     --data_name cosmo_lres_sim \
     --data_path './datasets/cosmo_lres_sim_2048' \
     --in_channels 2 \
-    --out_channles 2 \
+    --out_channels 2 \
     --crop_size 128 \
     --n_patches 8 \
     --lr 0.0001 \
