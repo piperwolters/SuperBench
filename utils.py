@@ -91,6 +91,7 @@ def loss_function(args):
 
 def save_checkpoint(model, save_path):
     '''save model and optimizer'''
+    print("save path:", save_path)
     torch.save({
         'model_state_dict': model.state_dict()
         }, save_path)

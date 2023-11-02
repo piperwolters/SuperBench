@@ -263,8 +263,10 @@ def validate_SSIM(args, test1_loader, test2_loader, model,mean,std):
         
         error1 = []
         with torch.no_grad():
+            print("test1_loader...")
             for batch_idx, (data, target) in enumerate((test1_loader)):
                 data, target = data.to(args.device).float(), target.to(args.device).float()
+                print("data:", data.shape, " target:", target.shape)
                 output = model(data) 
                 
                 output = normalize(args,output,mean,std)
@@ -279,8 +281,10 @@ def validate_SSIM(args, test1_loader, test2_loader, model,mean,std):
 
         error2 = []
         with torch.no_grad():
+            print("test2_loader...")
             for batch_idx, (data, target) in enumerate((test2_loader)):
                 data, target = data.to(args.device).float(), target.to(args.device).float()
+                print("data:", data.shape, " target:", target.shape)
                 output = model(data) 
                 output = normalize(args,output,mean,std)
                 target = normalize(args,target,mean,std)                
