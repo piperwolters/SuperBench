@@ -99,7 +99,7 @@ def save_checkpoint(model, save_path):
 
 def load_checkpoint(model, save_path):
     '''load model and optimizer'''
-    checkpoint = torch.load(save_path)
+    checkpoint = torch.load(save_path, map_location='cpu')
     model.load_state_dict(checkpoint['model_state_dict'])
 
     print('Model loaded...')

@@ -1,5 +1,6 @@
 '''Evaluation function'''
 
+import skimage.io
 import numpy as np
 import torch
 from torch import nn
@@ -260,15 +261,27 @@ def validate_SSIM(args, test1_loader, test2_loader, model,mean,std):
         '''Structual Similarity Index Measure (SSIM)'''
         from torchmetrics import StructuralSimilarityIndexMeasure
         ssim = StructuralSimilarityIndexMeasure().to(args.device)
-        
+       
+        # NOTE: data: torch.Size([4, 3, 128, 128])  target: torch.Size([4, 3, 1024, 1024])
+        sp = '/data/piperw/SuperBench/mturk_outputs/'
+
         error1 = []
         with torch.no_grad():
             print("test1_loader...")
             for batch_idx, (data, target) in enumerate((test1_loader)):
                 data, target = data.to(args.device).float(), target.to(args.device).float()
-                print("data:", data.shape, " target:", target.shape)
+
+                for b in range(4):
+                    save_data = np.transpose(data[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    save_target = np.transpose(target[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    skimage.io.imsave(sp + 'test1_lr_' + str(batch_idx) + '_' + str(b) + '.png', save_data)
+                    skimage.io.imsave(sp + 'test1_hr_' + str(batch_idx) + '_' + str(b) + '.png', save_target)
+
                 output = model(data) 
-                
+                for b in range(4):
+                    save_output = np.transpose(output[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    skimage.io.imsave(sp +'test1_srcnn_' + str(batch_idx) + '_' + str(b) + '.png', save_output)
+
                 output = normalize(args,output,mean,std)
                 target = normalize(args,target,mean,std)
                 for i in range(target.shape[0]):
@@ -284,8 +297,18 @@ def validate_SSIM(args, test1_loader, test2_loader, model,mean,std):
             print("test2_loader...")
             for batch_idx, (data, target) in enumerate((test2_loader)):
                 data, target = data.to(args.device).float(), target.to(args.device).float()
-                print("data:", data.shape, " target:", target.shape)
-                output = model(data) 
+
+                for b in range(4):
+                    save_data = np.transpose(data[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    save_target = np.transpose(target[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    skimage.io.imsave(sp + 'test2_lr_' + str(batch_idx) + '_' + str(b) + '.png', save_data)
+                    skimage.io.imsave(sp + 'test2_hr_' + str(batch_idx) + '_' + str(b) + '.png', save_target)
+
+                output = model(data)
+                for b in range(4):
+                    save_output = np.transpose(output[b, :, :, :].squeeze().detach().cpu().numpy(), (1, 2, 0)).astype(np.uint8)
+                    skimage.io.imsave(sp +'test2_srcnn_' + str(batch_idx) + '_' + str(b) + '.png', save_output)
+
                 output = normalize(args,output,mean,std)
                 target = normalize(args,target,mean,std)                
                 for i in range(target.shape[0]):
@@ -309,7 +332,7 @@ def main():
 
     # arguments for evaluation
     parser.add_argument('--model', type=str, default='shallowDecoder', help='model')
-    # parser.add_argument('--model_path', type=str, default='results/model_SwinIR_nskt_16k_4_0.0001_bicubic_0.0_5544.pt', help='saved model')
+    #parser.add_argument('--model_path', type=str, default='results/model_SwinIR_nskt_16k_4_0.0001_bicubic_0.0_5544.pt', help='saved model')
     parser.add_argument('--device', type=str, default=torch.device('cuda' if torch.cuda.is_available() else 'cpu'), help='computing device')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size')
     parser.add_argument('--seed', type=int, default=5544, help='random seed')
@@ -368,7 +391,8 @@ def main():
     model = model_list[args.model]
     model = torch.nn.DataParallel(model)
     
-    model_path = 'results/model_' + str(args.model) + '_' + str(args.data_name) + '_' + str(args.upscale_factor) + '_' + str(args.lr) + '_' + str(args.method) +'_' + str(args.noise_ratio) + '_' + str(args.seed) + '.pt'
+    #model_path = 'results/model_' + str(args.model) + '_' + str(args.data_name) + '_' + str(args.upscale_factor) + '_' + str(args.lr) + '_' + str(args.method) +'_' + str(args.noise_ratio) + '_' + str(args.seed) + '.pt'
+    model_path = 'results/nskt/model_SRCNN_nskt_16k_16_0.001_bicubic_0.0_5544.pt'
 
     if args.model != 'bicubic':
         model = load_checkpoint(model, model_path)
@@ -385,6 +409,8 @@ def main():
     # =============== validate ======================
     with open("result.txt", "a") as f:
         print(" model" + str(args.model) + " data: " + str(args.data_name)+ "  method: " + str(args.method) +" scale factor " + str(args.upscale_factor) + " noise ratio: " + str(args.noise_ratio),file = f)
+
+        """
         ine1, ine2 = validate_RINE(args, test1_loader, test2_loader, model,mean,std)
         print("Infinity norm --- test1 error: %.8f, test2 error: %.8f" % (ine1, ine2),file = f) 
 
@@ -393,6 +419,7 @@ def main():
 
         error1, error2 = validate_PSNR(args, test1_loader, test2_loader, model,mean,std)
         print("PSNR --- test1 error: %.5f, test2 error: %.5f" % (error1, error2),file = f) 
+        """
 
         error1, error2 = validate_SSIM(args, test1_loader, test2_loader, model,mean,std)
         print("SSIM --- test1 error: %.5f, test2 error: %.5f" % (error1, error2),file = f) 
